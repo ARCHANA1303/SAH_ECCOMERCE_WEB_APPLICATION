@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+    --font-bold: 700;
+}
+
+:root{
+    --first-color: #E55947;
+    --first-color-alt: #D2321E;
+    --white-color: #FAFAFF;
+    --dark-color: #101010;
+    --dark-color-light: #606060;
+    --gray-color: #F0F1F3;
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(225, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+:root{
+    --body-font: 'Montserrat','sans-serif';
+    --big-font-size: 3rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .75rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --body-font: 'Montserrat','sans-serif';
+        --big-font-size: 6rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .813rem;
+    }
+    
+}
+
+:root{
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+}
+/* ===z index === */
+:root{
+    --z-tooltip: 10;
+    --z-fixes: 100;
+}
+
+/* === Base === */
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.home__body{
+    margin: var(--header-height) 0 0 0;
+    font-family:var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--dark-color);
+    line-height: 1.6;
+
+}
+
+.heading1,
+.heading2,p{
+    margin: 0;
+}
+
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+    
+}
+.btn-primary {
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
+}
+  
+.btn-primary:is(:hover, :focus) {
+    background: var(--yale-blue);
+    border-color: var(--yale-blue);
+}
+  
+.btn-secondary { 
+    background: var(--white);
+    border-color: var(--black);
+}
+  
+.btn-secondary:is(:hover, :focus) {  background: var(--yale-blue);
+    border-color: var(--yale-blue); 
+}
+
+
+/* ==Layout== */
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+
+.l-header{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--gray-color);
+}
+
+.nav{
+    
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px){
+    .nav__menu{
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--white-color);
+        transition: .5s;
+    }
+}
+
+
+.nav__item{
+    margin-bottom: var(--mb-4);
+}
+
+.nav__link{
+    color: var(--dark-color);
+    font-weight: var(--font-semi);
+}
+
+.nav__link1{
+    color: #F0F1F3;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__logo{
+    font-weight: var(--font-bold);
+}
+
+.nav__cart{
+    font-size: 1.5rem;
+    margin-right: var(--mb-2);
+}
+
+.nav__toggle{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.show{
+    right: 0;
+}
+
+.active{
+    color: var(--first-color);
+}
+
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 1rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi);
+    transition: .3s;
+
+}
+
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+
+.footer__section{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.footer__container{
+    row-gap: 1.5rem;
+    margin-bottom: var(--mb-4);
+}
+
+.footer__title{
+    margin-bottom: var(--mb-1);
+}
+
+.footer__deal{
+    margin-bottom: var(--mb-2);
+}
+
+.footer__store{
+    width: 100px;
+}
+
+.footer__link, .footer__social{
+    color: var(--dark-color-light);
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+
+}
+
+.footer__social{
+    font-size: 1.3rem;
+    margin-right: var(--mb-1);
+}
+
+.footer__copy{
+    border-top: 1px solid var(--dark-color-light);
+    padding: 3rem;
+    text-align: center;
+    color: var(--dark-color-light);
+    font-size: small;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    .section-all{
+        margin-bottom: var(--mb-4);
+    }
+
+    .nav{
+        /* height: calc(var(--header-height) + rem); */
+        height: 100%;
+        justify-content: initial;
+    }
+
+    .nav__menu{
+        margin-left: auto;
+    }
+
+    .nav__list{
+        display: flex;
+    }
+
+    .nav__item{
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+    .footer__container{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+
+   
+}
+
+@media screen and (min-width: 1024px){
+    .nav{
+        height: 100%;
+    }
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+.btn {
+    /* margin-left: -256px; */
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: var(--fs-5);
+    border-radius: 5px;
+    padding: var(--padding, 4px 9px);
+    border: var(--border-width, 2px) solid transparent;
+    transition: var(--transition);
+    gap:0;
+}
+.btn-primary {
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
+}
+
+.hero {
+    background-image: url('https://www.nobroker.in/blog/wp-content/uploads/2022/04/Furniture-and-Purple-Wall-Colour-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    background-blend-mode: overlay;
+    display: grid;
+    place-items: center;
+    min-height: 600px;
+    text-align: left;
+    padding-top: 125px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-title { 
+    /* margin-left: -260px; 
+    margin-right: 260px; */
+    /* border: 1px solid red; */
+    color: #F0F1F3;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+  
+  }
+
+
+
+
+
+
+
