@@ -1,5 +1,5 @@
 # SAH_ECCOMERCE_WEB_APPLICATION
-sri amman paint and hardwares web application using HTML, CSS, JavaScript, PHP, MYSQLphp
+Responsive, user friendly and dynamic paint and hardwares web application using HTML, CSS, JavaScript, PHP, MYSQL
 HOME PAGE
 HEADER
 ![Screenshot (258)](https://github.com/ARCHANA1303/SAH_ECCOMERCE_WEB_APPLICATION/assets/83755155/fe66b0eb-d797-45ec-a19f-7b402140a8f7)
